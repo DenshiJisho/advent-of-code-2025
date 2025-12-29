@@ -12,7 +12,11 @@ R14
 L82`;
 
 describe('On Day 1', () =>{
-    it(`part1 is identity function`, ()=>{
+    it(`part1`, ()=>{
         expect(day1.solveForPartOne(example_input1)).toBe('3');
+    })
+
+    it(`part2`, ()=>{
+        expect(day1.solveForPartTwo(example_input1)).toBe('6');
     })
 });

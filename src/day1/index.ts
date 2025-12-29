@@ -26,7 +26,27 @@ class Day1 extends Day {
   }
 
   solveForPartTwo (input: string): string {
-    return input;
+    let x: number = this.start;
+    let count = 0;
+    for (const line of input.split('\n')) {
+      if (line.startsWith('L')) {
+        if (x === 0) {
+          count -= 1;
+        }
+        x = x - parseInt(line.slice(1));
+      } else if (line.startsWith('R')) {
+        x = x + parseInt(line.slice(1));
+      }
+      count += Math.abs(Math.floor(x / 100));
+      if (x === 0) {
+        count += 1;
+      }
+      if (x < 0 && x % 100 === 0) {
+        count += 1;
+      }
+      x = ((x % 100) + 100) % 100;
+    }
+    return String(count);
   }
 }
 
