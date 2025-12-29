@@ -7,5 +7,8 @@ My personal attempts and solutions for 2025's [Advent of Code](https://adventofc
     * Arithmetic around circular number line using modulo
   * Part 2 :heavy_check_mark:
     * Count any passes of 0 with some hacky ifs for edge cases
+* Day 2 [[Problem]](https://adventofcode.com/2025/day/2) [[Solution Code]](/src/day2/index.ts)
+  * Part 1 :heavy_check_mark:
+    * Find numbers with duplicated first/second half within given ranges
 
 Using [LBognanni's AoC template node framework](https://github.com/LBognanni/adventofcode-typescript-starter)
