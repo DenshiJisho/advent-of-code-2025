@@ -1,0 +1,33 @@
+import { Day } from '../day';
+
+class Day1 extends Day {
+
+  start: number;
+
+  constructor () {
+    super(1);
+    this.start = 50;
+  }
+
+  solveForPartOne (input: string): string {
+    let x: number = this.start;
+    let count = 0;
+    for (const line of input.split('\n')) {
+      if (line.startsWith('L')) {
+        x = (x - parseInt(line.slice(1)) + 100) % 100;
+      } else if (line.startsWith('R')) {
+        x = (x + parseInt(line.slice(1))) % 100;
+      }
+      if (x === 0) {
+        count += 1;
+      }
+    }
+    return String(count);
+  }
+
+  solveForPartTwo (input: string): string {
+    return input;
+  }
+}
+
+export default new Day1();
